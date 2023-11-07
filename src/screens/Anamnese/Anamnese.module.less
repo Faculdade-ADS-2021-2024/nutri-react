@@ -1,0 +1,175 @@
+@import './Anamnese.module.less';
+
+.anamnese {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 2.5rem;
+
+    .menu {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            border-bottom: 2px solid var(--verde-500);
+            padding: 5px;
+        }
+    }
+
+    main {
+        width: 100%;
+        height: 75%;
+        display: flex;
+        gap: 1rem;
+
+        .anamneseAnteriores {
+            width: 30%;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background: rgb(233, 233, 233);
+            overflow-y: auto;
+
+            div {
+                h3 {
+                    margin-bottom: .625rem;
+                }
+
+                hr {
+                    margin-bottom: .625rem;
+                }
+            }
+
+            .anamneseAnteriorList {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-radius: .5rem;
+                    padding: .625rem;
+                    margin-bottom: .5rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: rgb(213, 213, 213);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .anamneseDoDia {
+            width: 70%;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background: rgb(233, 233, 233);
+            display: flex;
+            flex-direction: column;
+
+            .header {
+                h3 {
+                    margin-bottom: .3rem;
+                }
+
+                strong {
+                    margin-right: .2rem;
+                }
+
+                span {
+                    margin-left: .2rem;
+                }
+
+                strong:nth-child(4) {
+                    margin-left: 1rem;
+                }
+
+                hr {
+                    margin-top: .3rem;
+                }
+            }
+
+            div {
+                overflow-y: auto;
+                form {
+                    margin-top: 1rem;
+                    width: 99%;
+
+                    .input-container {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .3rem;
+                        margin-top: .5rem;
+
+                        textarea {
+                            padding: .5rem;
+                            height: 3rem;
+                            resize: none;
+                        }
+
+                        input {
+                            height: 2rem;
+                            padding: .5rem;
+                        }
+                    }
+
+                    .foiaonutri,
+                    .fuma,
+                    .bebe,
+                    .trabalha,
+                    .doencaFamilia {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                    }
+                }
+            }
+
+            footer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-top: .5rem;
+
+                hr {
+                    width: 100%;
+                }
+
+                .control-container {
+                    margin-top: .5rem;
+                    display: flex;
+                    gap: .5rem;
+
+                    button {
+                        width: 8rem;
+                        padding: .5rem 0;
+                        border: none;
+                        cursor: pointer;
+                        color: var(--white);
+                        transition: .2;
+                    }
+
+                    .salvar {
+                        background: var(--verde-500);
+
+                        &:hover {
+                            background-color: #1f5818;
+                        }
+                    }
+
+                    .cancelar {
+                        background: rgb(210, 0, 0);
+
+                        &:hover {
+                            background: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

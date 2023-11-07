@@ -1,0 +1,107 @@
+@import './Agendamento.module.less';
+
+.agendamento {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 2.5rem;
+
+    .menu {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+            border-bottom: 2px solid var(--verde-500);
+            padding: 5px;
+        }
+
+        .filtro {
+            display: flex;
+            gap: .5rem;
+
+            .input-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                input {
+                    width: 40rem;
+                    height: 2rem;
+                    padding: .5rem;
+                }
+
+                svg {
+                    position: absolute;
+                    top: calc(50% - 24);
+                    right: .625rem;
+                }
+            }
+
+            .agendamento {
+                width: 12rem;
+                height: 2rem;
+                border: none;
+                background: var(--verde-500);
+                color: var(--white);
+                cursor: pointer;
+                transition: .2s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #1f5818;
+                }
+            }
+        }
+    }
+
+    main {
+        height: calc(100% - 12rem);
+
+        table {
+            margin-top: 2rem;
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ededed;
+        }
+
+        thead {
+            background: var(--bege-300);
+            height: 2.5rem;
+
+            th {
+                text-align: left;
+                padding-left: 1rem;
+            }
+        }
+
+        tbody {
+
+            tr {
+                height: 40px;
+                border-bottom: 1px solid #ededed;
+                background-color: #fbfbfb;
+                margin-left: 1rem;
+                text-align: left;
+
+                td {
+                    padding-left: 1rem;
+
+                    a {
+                        text-decoration: none;
+                        color: var(--verde-500);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

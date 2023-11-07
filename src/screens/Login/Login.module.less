@@ -1,0 +1,78 @@
+@import '../../Global.module.less';
+
+.login {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    .containerImage {
+        width: 75vw;
+        background: var(--verde-300);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+        }
+    }
+
+    .containerLogin {
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        form {
+            width: 70%;
+            margin: 0 auto;
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+
+                p {
+                    font-size: .875rem;
+                }
+            }
+
+            .input-container {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                margin-bottom: .8rem;
+    
+                label {
+                    font-size: 1rem;
+                }
+    
+                input {
+                    width: 100%;
+                    height: 2rem;
+                    padding: 8px;
+                }
+            }
+
+            .control-container {
+                
+                button {
+                    width: 100%;
+                    height: 2rem;
+                    border: none;
+                    background: var(--verde-500);
+                    color: var(--white);
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:hover {
+                        background-color: #1f5818;
+                    }
+                }
+            }
+        }
+    }
+}
